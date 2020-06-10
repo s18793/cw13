@@ -92,7 +92,7 @@ namespace cw13.Models
              modelBuilder.Entity<Zamowienie_WyrobCukierniczy>()
                         .HasKey(e =>new { e.IdWyrobu, e.IdZamowienia });
             
-           
+           //////
            
             modelBuilder.Entity<Zamowienie_WyrobCukierniczy>()
                         .Property(e => e.Ilosc)
