@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using cw13.Models;
+using cw13.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -26,6 +27,9 @@ namespace cw13
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+
+            services.AddScoped<ICukierniaDb, EfCukierniaDb>();
             //services.AddDbContext<CukierniaContext>();
             services.AddDbContext<CukierniaContext>(options =>
             {

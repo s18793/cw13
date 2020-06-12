@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace cw13.Controllers
 {
+
+    [ApiController]
     public class CukierniaController : ControllerBase
 
 
@@ -14,13 +16,14 @@ namespace cw13.Controllers
 
         private readonly ICukierniaDb ic;
 
-
+        
         public CukierniaController(ICukierniaDb dv)
         {
             ic = dv;
         }
         [HttpGet]
-        public IActionResult getOrders(String nazwisko)
+        [Route("api/orders")]
+        public IActionResult getOrders(string nazwisko)
         {
             var order = ic.getOrders(nazwisko);
             return Ok(order);

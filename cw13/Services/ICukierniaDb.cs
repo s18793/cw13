@@ -10,7 +10,7 @@ namespace cw13.Services
     public interface ICukierniaDb
     {
 
-        public IEnumerable<OrderRespon> getOrders(String nazwisko);
+        public IEnumerable<OrderRespon> getOrders(string nazwisko);
 
     }
 }
